@@ -1,7 +1,10 @@
 ﻿#include "pch.h"
+#include "FbxLoader.h"
 
 int main()
 {
+	FbxLoader a;
+
 	for (auto& p : directory_iterator("Fbx files/Models/")) {
 		string extension;
 		if (p.path().has_extension())
@@ -9,9 +12,8 @@ int main()
 
 		if (extension == ".fbx" ||
 			extension == ".FBX") {
+			a.Load(p.path().string().c_str());
+			cout << endl << endl;
 		}
 	}
-
-	FbxManager* a{};
-	a->Create();
 }

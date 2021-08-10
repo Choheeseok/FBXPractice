@@ -63,3 +63,8 @@ bld/
 # Debug files
 *.idb
 *.pdb
+
+# Resource files
+*.fbx
+*.FBX
+*.png
